@@ -2,6 +2,7 @@
 from fastapi.middleware.cors import CORSMiddleware
 from app.db.init_db import init_db
 from app.api.missions import router as missions_router
+from app.api.career import router as career_router
 
 app = FastAPI(
     title="NEXA AI Life OS",
@@ -22,6 +23,7 @@ def on_startup():
     init_db()
 
 app.include_router(missions_router)
+app.include_router(career_router)
 
 @app.get("/")
 def root():
