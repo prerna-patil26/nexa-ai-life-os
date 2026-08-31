@@ -7,6 +7,7 @@ from app.api.learning import router as learning_router
 from app.api.vision import router as vision_router
 from app.api.documents import router as documents_router
 from app.api.creator import router as creator_router
+from app.api.shopping import router as shopping_router
 
 app = FastAPI(
     title="NEXA AI Life OS",
@@ -32,6 +33,7 @@ app.include_router(learning_router)
 app.include_router(vision_router)
 app.include_router(documents_router)
 app.include_router(creator_router)
+app.include_router(shopping_router)
 
 @app.get("/")
 def root():
