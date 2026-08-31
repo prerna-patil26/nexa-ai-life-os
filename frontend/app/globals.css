@@ -1,0 +1,49 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-purple: #8b5cf6;
+  --neon-blue: #3b82f6;
+  --bg-dark: #0a0a0f;
+  --bg-card: #13131a;
+}
+
+body {
+  background: var(--bg-dark);
+  color: #ffffff;
+}
+
+/* Premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+/* Glow effects */
+.glow-purple {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Card style */
+.nexa-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.nexa-card:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+  transform: translateY(-2px);
+}
